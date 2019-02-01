@@ -18,7 +18,16 @@ public class Recursion{
       }
     }
 
+    //this helper finds the guess if it is not equal to the permitted value.
     private static double mysqrt(double n, double tolerance, double guess) {
+      if (Math.abs((guess * guess - n) / (n * 1000)) < tolerance) {
+        return guess;
+    }
+    else {
+      return sqrtHelper(n, tolerance, (n / guess + guess) / 2);
+    }
+  }
+
 
     /*Recursively find the n'th fibbonaci number in linear time
      *fib(0) = 1; fib(1) = 1; fib(5) = 5
