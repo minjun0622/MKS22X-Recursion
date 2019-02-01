@@ -6,14 +6,19 @@ public class Recursion{
      *precondition: n is non-negative
     */
     public static double sqrt(double n, double tolerance){
-      if ((n - tolerance) < 0.0001) {
-        return n;
+      /*
+      During Intro 1, I did this exact problem but in scheme,
+      the basic idea was to use a helper function that took in the guess that was done first.
+      */
+      if (n == 0) {
+        return 0;
       }
       else {
-
+        mysqrt(n, tolerance, 1);
       }
-
     }
+
+    private static double mysqrt(double n, double tolerance, double guess) {
 
     /*Recursively find the n'th fibbonaci number in linear time
      *fib(0) = 1; fib(1) = 1; fib(5) = 5
@@ -34,7 +39,13 @@ public class Recursion{
 }
 
 */
+      if ()
       fibber(n, n - 1);
+    }
+
+    private static int fibber(int number, int before) {
+
+
     }
 
     /*As Per classwork*/
