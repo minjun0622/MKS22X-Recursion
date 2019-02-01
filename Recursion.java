@@ -34,7 +34,7 @@ public class Recursion{
 }
 
 */
-      fibber();
+      fibber(n, n - 1);
     }
 
     /*As Per classwork*/
