@@ -20,7 +20,21 @@ public class Recursion{
      *precondition: n is non-negative
      */
     public static int fib(int n){
+      /*
+      This method is the way that the recursion without linear time.
+      Just for reference
+      if (n == 0) {
+      return 0;
+    }
+    if (n == 1) {
+    return 1;
+  }
+  else {
+  return fib (n -1) + fib (n -2);
+}
 
+*/
+      fibber();
     }
 
     /*As Per classwork*/
