@@ -46,13 +46,18 @@ public class Recursion{
   else {
   return fib (n -1) + fib (n -2);
 }
-
 */
       if ()
       fibber(n, n - 1);
     }
 
     private static int fibber(int number, int before) {
+      if (number == 0) {
+        return 0;
+      }
+      if (number == 1) {
+        return 1;
+      }i
 
 
     }
