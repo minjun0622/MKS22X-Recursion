@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 public class Recursion{
-
     /*You may write additional private methods */
     /*Recursively find the sqrt using Newton's approximation
      *tolerance is the allowed percent error the squared answer is away from n.
@@ -65,11 +64,19 @@ public class Recursion{
     We can use the function of an arraylist to shrink down or add to the list at all times.
     */
     public static ArrayList<Integer> makeAllSums(int n){
-
+      ArrayList<Integer> data = new ArrayList<Integer>();
+      sumDigits(n, 0, data);
     }
 
     private static ArrayList<Integer> sumDigits(int sum, int partial, ArrayList<Integer> data) {
-
+      if (sum == 0) {
+        data.add(partial);
+      }
+      if (sum > 0) {
+        sumDigits(sum - 1, partial  + sum, data);
+        sumDigits(sum - 1, partial, data);
+      }
+      return data;
     }
 
 }
