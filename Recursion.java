@@ -1,5 +1,6 @@
-
+import java.util.ArrayList;
 public class Recursion{
+
     /*You may write additional private methods */
     /*Recursively find the sqrt using Newton's approximation
      *tolerance is the allowed percent error the squared answer is away from n.
@@ -28,11 +29,13 @@ public class Recursion{
     }
   }
 
-
     /*Recursively find the n'th fibbonaci number in linear time
      *fib(0) = 1; fib(1) = 1; fib(5) = 5
      *precondition: n is non-negative
      */
+     //Linear time because it uses a helper method in which the parameters are counted inside
+     //the helper function.
+
     public static int fib(int n){
       /*
       This method is the way that the recursion without linear time.
@@ -46,23 +49,26 @@ public class Recursion{
   else {
   return fib (n -1) + fib (n -2);
 }
-
 */
-      if ()
-      fibber(n, n - 1);
+      return fibber(0, 1, n, 0);
     }
 
-    private static int fibber(int number, int before) {
+    //helper for fib
+    private static int fibber(int before, int after, int target, int index) {
+      if (index == current) {
+        return before;
+      }
+      return fibber(after, before + after, target, index + 1);
+    }
 
+    /*As Per classwork
+    We can use the function of an arraylist to shrink down or add to the list at all times.
+    */
+    public static ArrayList<Integer> makeAllSums(int n){
 
     }
 
-    /*As Per classwork*/
-    public static ArrayList<Integer> makeAllSums(){
-      sumDigits()
-    }
-
-    private static ArrayList<Integer> sumDigits() {
+    private static ArrayList<Integer> sumDigits(int sum, int partial, ArrayList<Integer> data) {
 
     }
 
