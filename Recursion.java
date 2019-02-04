@@ -10,17 +10,13 @@ public class Recursion{
     System.out.println("value:"+ 0.1 + "     square root:"+ sqrt(0.1,0.0001));
 
     System.out.println();
-    System.out.println();
 
     //testing fib
     System.out.println("Testing fib");
     System.out.println(fib(0));
     System.out.println(fib(1));
-    System.out.println(fib(10));
-    System.out.println(fib(12));
-    System.out.println(fib(89));
+    System.out.println(fib(5));
 
-    System.out.println();
     System.out.println();
 
     //testing makeAllSums
@@ -106,8 +102,8 @@ public class Recursion{
         data.add(partial);
       }
       if (sum > 0) {
-        sumDigits(sum - 1, partial  + sum, data);
         sumDigits(sum - 1, partial, data);
+        sumDigits(sum - 1, partial + sum, data);
       }
     }
 
