@@ -45,7 +45,7 @@ public class Recursion{
         return 0;
       }
       else {
-        mysqrt(n, tolerance, 1);
+        return mysqrt(n, tolerance, 1);
       }
     }
 
@@ -55,7 +55,7 @@ public class Recursion{
         return guess;
     }
     else {
-      return sqrtHelper(n, tolerance, (n / guess + guess) / 2);
+      return mysqrt(n, tolerance, (n / guess + guess) / 2);
     }
   }
 
@@ -85,7 +85,7 @@ public class Recursion{
 
     //helper for fib
     private static int fibber(int before, int after, int target, int index) {
-      if (index == current) {
+      if (index == target) {
         return before;
       }
       return fibber(after, before + after, target, index + 1);
@@ -97,10 +97,11 @@ public class Recursion{
     public static ArrayList<Integer> makeAllSums(int n){
       ArrayList<Integer> data = new ArrayList<Integer>();
       sumDigits(n, 0, data);
+      return data;
     }
 
       //helper for the makeAllSums method.
-    private static ArrayList<Integer> sumDigits(int sum, int partial, ArrayList<Integer> data) {
+    private static void sumDigits(int sum, int partial, ArrayList<Integer> data) {
       if (sum == 0) {
         data.add(partial);
       }
@@ -108,7 +109,6 @@ public class Recursion{
         sumDigits(sum - 1, partial  + sum, data);
         sumDigits(sum - 1, partial, data);
       }
-      return data;
     }
 
 }
