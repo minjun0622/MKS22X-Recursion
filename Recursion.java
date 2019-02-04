@@ -67,7 +67,7 @@ public class Recursion{
       ArrayList<Integer> data = new ArrayList<Integer>();
       sumDigits(n, 0, data);
     }
-
+    //helper for the makeAllSums method.
     private static ArrayList<Integer> sumDigits(int sum, int partial, ArrayList<Integer> data) {
       if (sum == 0) {
         data.add(partial);
