@@ -1,32 +1,65 @@
 import java.util.ArrayList;
 public class Recursion{
-  public static void main(String[] args){
-    //testing sqr root
-    System.out.println("Testing sqrt");
-		System.out.println("value:"+ 7 + "     square root:"+ sqrt(7,0.0001));
-    System.out.println("value:"+ 2 + "     square root:"+ sqrt(2,0.0001));
-    System.out.println("value:"+ 4 + "     square root:"+ sqrt(4,0.0001));
-    System.out.println("value:"+ 0.5 + "     square root:"+ sqrt(0.5,0.0001));
-    System.out.println("value:"+ 0.1 + "     square root:"+ sqrt(0.1,0.0001));
+  public static void main(String[] args) {
+        System.out.println("sqrt()");
+        System.out.println("-----------------------\n");
 
-    System.out.println();
+        System.out.println("sqrt(4, 0.00001)");
+        System.out.println("EXPECTED: 2");
+        System.out.println(sqrt(4, 0.00001));         // 2
 
-    //testing fib
-    System.out.println("Testing fib");
-    System.out.println(fib(0));
-    System.out.println(fib(1));
-    System.out.println(fib(5));
+        System.out.println("----");
 
-    System.out.println();
+        System.out.println("sqrt(8, 0.00001)");
+        System.out.println("EXPECTED: ~2.8284");
+        System.out.println(sqrt(8, 0.00001));         // ~2.8284
 
-    //testing makeAllSums
-    System.out.println("Testing makeAllSums");
-    System.out.println(makeAllSums(0));
-    System.out.println(makeAllSums(1));
-    System.out.println(makeAllSums(2));
-    System.out.println(makeAllSums(3));
-    System.out.println(makeAllSums(4));
-  	}
+        System.out.println("----");
+
+        System.out.println("sqrt(0, 0.00001)");
+        System.out.println("EXPECTED: 0");
+        System.out.println(sqrt(0, 0.00001));         // 0
+
+        System.out.println("\n");
+
+        System.out.println("fib()");
+        System.out.println("-----------------------\n");
+
+        System.out.println("fib(0)");
+        System.out.println("EXPECTED: 0");
+        System.out.println(fib(0));                   // 0
+
+        System.out.println("----");
+
+        System.out.println("fib(1)");
+        System.out.println("EXPECTED: 1");
+        System.out.println(fib(1));                   // 1
+
+        System.out.println("----");
+
+        System.out.println("fib(7)");
+        System.out.println("EXPECTED: 13");
+        System.out.println(fib(7));                   // 13
+
+        System.out.println("makeAllSums()");
+        System.out.println("-----------------------\n");
+
+        System.out.println("makeAllSums(0)");
+        System.out.println("EXPECTED: [0]");
+        System.out.println(makeAllSums(0));           // [0]
+
+        System.out.println("----");
+
+        System.out.println("makeAllSums(1)");
+        System.out.println("EXPECTED: [1, 0]");
+        System.out.println(makeAllSums(1));           // [1, 0]
+
+        System.out.println("----");
+
+        System.out.println("makeAllSums(3)");
+        System.out.println("EXPECTED: [0, 3, 2, 5, 1, 4, 3, 6]");
+        System.out.println(makeAllSums(3));           // [0, 3, 2, 5, 1, 4, 3, 6]
+}
     /*You may write additional private methods */
     /*Recursively find the sqrt using Newton's approximation
      *tolerance is the allowed percent error the squared answer is away from n.
@@ -101,7 +134,7 @@ public class Recursion{
       if (sum == 0) {
         data.add(partial);
       }
-      if (sum > 0) {
+      else {
         sumDigits(sum - 1, partial, data);
         sumDigits(sum - 1, partial + sum, data);
       }
