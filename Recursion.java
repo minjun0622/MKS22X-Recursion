@@ -52,12 +52,24 @@ public class Recursion{
       return fibber(0, 1, n, 0);
     }
 
+<<<<<<< HEAD
     //helper for fib
     private static int fibber(int before, int after, int target, int index) {
       if (index == current) {
         return before;
       }
       return fibber(after, before + after, target, index + 1);
+=======
+    private static int fibber(int number, int before) {
+      if (number == 0) {
+        return 0;
+      }
+      if (number == 1) {
+        return 1;
+      }i
+
+
+>>>>>>> 79bcc21206f7676b8fff15a028e72c201bc21b4c
     }
 
     /*As Per classwork
